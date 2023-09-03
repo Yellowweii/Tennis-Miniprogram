@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/postGame/postGame",
+    "pages/user/profilesettings/profilesettings",
+    "pages/welcome/welcome",
+    "pages/profile/profile",
+    "pages/chat/chat",
+    "pages/userGames/userGames",
+    "pages/exploredetail/exploredetail"
+  ],
+  "window": {
+    "backgroundColor": "#151515",
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "toolbar": "/components/toolbar/toolbar",
+    "van-slider": "/components/vant/weapp/slider/index",
+    "levelSlider": "/components/levelSlider/levelSlider"
+  },
+  "permission": {
+
+  },
+  "requiredPrivateInfos": [
+ 
+  ],
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents"
+}

@@ -1,0 +1,79 @@
+/* pages/user/user.wxss */
+
+.main {
+  padding: 160rpx 60rpx 120rpx 60rpx;
+}
+
+.avatar {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 16rpx;
+}
+
+.gender-marker {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.nickname {
+  color: white;
+  font-size: 16pt;
+  line-height: 16pt;
+  color: white;
+}
+
+.level {
+  font-size: 8pt;
+  line-height: 8pt;
+  color: black;
+  background-color: var(--action);
+  padding: 8rpx 12rpx;
+  border-radius: 9999rpx;
+  min-width: fit-content;
+  margin-right: 12rpx;
+}
+
+.level-text {
+  margin-left: 6rpx;
+}
+
+.activity-count {
+  font-size: 28pt;
+  color: #acacac;
+}
+
+.activity-text {
+  font-size: 9pt;
+  color: #5b5b5b;
+}
+
+.activity-record-title {
+  font-size: 11pt;
+  color: #888888;
+}
+
+.setting {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.introduction {
+  font-size: 22rpx;
+  color: #6d6d6d;
+  white-space: nowrap; /* 禁止换行 */
+  overflow: hidden; /* 超出部分隐藏 */
+  text-overflow: ellipsis;
+  width: 400rpx;
+}
+
+.court,.time {
+  color: #ACACAC;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.label {
+  color: #5B5B5B;
+  font-size: 24rpx;
+  margin-top: 36rpx;
+}

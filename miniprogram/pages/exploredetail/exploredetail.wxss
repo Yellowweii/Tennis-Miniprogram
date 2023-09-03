@@ -1,0 +1,102 @@
+.content {
+  margin-bottom: 160rpx;
+}
+.content .background {
+  position: relative;
+  width: 100%;
+  height: 600rpx;
+  background: linear-gradient(180deg, rgba(21, 21, 21, 0) 0%, rgba(21, 21, 21, 0.8) 100%);
+}
+.content .background .background-img {
+  width: 100%;
+  height: 100%;
+}
+.content .background .share {
+  position: absolute;
+  top: 260rpx;
+  right: 60rpx;
+  width: 55rpx;
+  height: 55rpx;
+  padding: 0;
+  border-radius: 50% !important;
+  background-color: #444;
+  z-index: 999;
+}
+.content .background .share .share-icon {
+  width: 32rpx;
+  height: 32rpx;
+}
+.content .background .info {
+  position: absolute;
+  bottom: 30rpx;
+  left: 50rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  color: #fff;
+}
+.content .background .info .userinfo {
+  margin-bottom: 16rpx;
+  font-size: 56rpx;
+  font-weight: 600;
+  line-height: 64rpx;
+}
+.content .background .info .userinfo .gender-marker {
+  width: 28rpx;
+  height: 28rpx;
+}
+.content .background .info .location {
+  font-size: 32rpx;
+  font-weight: 600;
+  line-height: 40rpx;
+}
+.content .background .info .location .icon {
+  margin-right: 15rpx;
+}
+.content .background .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
+  font-size: 30rpx;
+}
+.btns {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 750rpx;
+  padding: 32rpx 64rpx;
+  align-items: flex-start;
+  gap: 32rpx;
+  background-color: #151515;
+}
+.btns .btn {
+  padding: 32rpx;
+  border-radius: 56rpx;
+  gap: 32rpx;
+  background: #444;
+}
+.textstyle {
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: 400;
+  line-height: 48rpx;
+}
+.title {
+  color: #444;
+  font-size: 24rpx;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32rpx;
+}
+.mb-60 {
+  margin-bottom: 60rpx;
+}
+.m-50 {
+  margin: 50rpx;
+}
+.mr-32 {
+  margin-right: 32rpx;
+}

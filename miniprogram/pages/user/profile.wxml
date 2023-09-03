@@ -1,0 +1,68 @@
+<view class="main" hover-class="none" hover-stop-propagation="false">
+  <view class="flex justify-between align-center" hover-class="none" hover-stop-propagation="false">
+    <view class="flex" hover-class="none" hover-stop-propagation="false">
+      <!-- Avatar -->
+      <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+      <view class="margin-left flex flex-col justify-between" hover-class="none" hover-stop-propagation="false">
+        <view class="flex align-center" hover-class="none" hover-stop-propagation="false">
+          <view class="nickname margin-right-xs" hover-class="none" hover-stop-propagation="false">
+            {{userInfo.nickname}}
+          </view>
+          <image wx:if="{{userInfo.gender === 'male'}}" class="gender-marker" src="/images/ic_marker_male.png"></image>
+          <image wx:if="{{userInfo.gender === 'female'}}" class="gender-marker" src="/images/ic_marker_female.png"></image>
+        </view>
+        <!-- Tags -->
+        <view class="flex">
+          <view wx:if="{{userInfo.club}}" class="level flex align-center" hover-class="none" hover-stop-propagation="false">
+            <image style="width: 24rpx; height: 24rpx;" src="../../images/ic_star-fill.svg"></image>
+            <view class="level-text">{{userInfo.club}}</view>
+          </view>
+          <view class="level flex align-center justify-center" hover-class="none" hover-stop-propagation="false">
+            NTRP {{userInfo.level}}
+          </view>
+        </view>
+
+        <!-- Self intro -->
+        <view wx:if="{{userInfo.introduction}}" class="introduction">{{userInfo.introduction}}</view>
+        <view wx:else class="introduction">这个人什么也没有填~</view>
+      </view>
+    </view>
+    <view wx:if="{{from === 'personal'}}" bindtap="handleSettingClick" class="text-2xl text-gray" hover-class="none" hover-stop-propagation="false">
+      <image class="setting" src="../../images/ic_setting.svg" mode="" />
+    </view>
+  </view>
+  <view class="flex justify-between margin-top-2xl" hover-class="none" hover-stop-propagation="false">
+    <view class="flex flex-col align-center" hover-class="none" hover-stop-propagation="false">
+      <view class="activity-count" bindtap="getHostedGames" hover-class="none" hover-stop-propagation="false">
+        {{gameHost}}
+      </view>
+      <view class="activity-text" hover-class="none" hover-stop-propagation="false">发起的球局</view>
+    </view>
+    <view class="flex flex-col align-center" hover-class="none" hover-stop-propagation="false">
+      <view class="activity-count" bindtap="getJoinedGames" hover -class="none" hover-stop-propagation="false">
+        {{gameJoined}}
+      </view>
+      <view class="activity-text" hover-class="none" hover-stop-propagation="false">参与的球局</view>
+    </view>
+    <view class="flex flex-col align-center" hover-class="none" hover-stop-propagation="false">
+      <view class="activity-count" hover-class="none" hover-stop-propagation="false">
+        {{gameHours}}
+      </view>
+      <view class="activity-text" hover-class="none" hover-stop-propagation="false">打球总时长(小时)</view>
+    </view>
+  </view>
+  <view class="extra-info flex justify-between margin-top-2xl">
+    <view wx:if="{{userInfo.court}}" class="frequented-court">
+      <view class="court">{{userInfo.court}}</view>
+      <view class="label">常去的球场</view>
+    </view>
+    <view  wx:if="{{userInfo.availableDate && userInfo.availableTime}}" class="frequented-time">
+      <view class="time">{{userInfo.availableDate}}的{{userInfo.availableTime}}</view>
+      <view class="label">常去的时间</view>
+    </view>
+  </view>
+  <view class="margin-top-3xl activity-record-title" hover-class="none" hover-stop-propagation="false">
+    {{userInfo.nickname}} 的活动记录
+  </view>
+  <canvas class="myCanva margin-top" style="width: 624rpx; height: 360rpx;" type="2d"></canvas>
+</view>

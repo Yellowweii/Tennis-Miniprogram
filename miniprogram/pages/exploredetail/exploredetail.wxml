@@ -1,0 +1,79 @@
+<view class="cu-custom" style="height:{{appBarHeight-statusBarHeight-100}}px;z-index: 999;">
+  <view class="cu-bar fixed {{bgImage!=''?'none-bg text-white bg-img':''}} {{bgColor}}" style="height:{{appBarHeight}}px;padding-top:{{statusBarHeight}}px;{{bgImage?'background-image:url(' + bgImage+')':''}}">
+    <view class="action padding-left-sm" bindtap="backPage">
+      <text class="cuIcon-back text-gray"></text>
+      <text style="font-weight: 400;">约球</text>
+    </view>
+  </view>
+</view>
+<view class="content">
+  <view class="background">
+    <image class="background-img" src="{{ matchedUserInfo.avatarUrl }}" mode="aspectFill"></image>
+    <button class="share flex justify-center align-center" open-type="share">
+      <image class="share-icon" src="../../images/ic_share.svg"></image>
+    </button>
+    <view class="info flex">
+      <view class="userinfo flex align-center">
+        <view class="nickname margin-right-sm">{{ matchedUserInfo.nickname }}</view>
+        <image wx:if="{{ matchedUserInfo.gender === 'female' }}" class="gender-marker" src="/images/ic_marker_female.png"></image>
+        <image wx:else class="gender-marker" src="/images/ic_marker_male.png"></image>
+      </view>
+      <view class="location">
+        <text class="cuIcon-locationfill icon"></text>
+        <text>{{ matchedUserInfo.distance }}km</text>
+      </view>
+    </view>
+    <view class="mask"></view>
+  </view>
+  <view class="m-50 flex flex-col">
+    <view class="flex justify-between mb-60">
+      <view class="level flex-col">
+        <view class="title">等级</view>
+        <view class="textstyle">{{ matchedUserInfo.level }}</view>
+      </view>
+      <view class="training flex-col">
+        <view class="title">训练时长</view>
+        <view class="textstyle">{{ matchedUserInfo.gameHours }}小时</view>
+      </view>
+      <view class="check flex-col">
+        <view class="title">10天内训练过</view>
+        <view class="textstyle">{{ matchedUserInfo.isWithinTenDays ? "是" : "否" }}</view>
+      </view>
+    </view>
+    <view class="mb-60">
+      <view class="title">约球时间</view>
+      <view class="textstyle">
+        <text wx:if="{{matchedUserInfo.availableDate && matchedUserInfo.availableTime}}">
+          {{ matchedUserInfo.availableDate }}{{ matchedUserInfo.availableTime }}
+        </text>
+        <text wx:else>用户暂时还未选择~</text>
+      </view>
+    </view>
+    <view class="mb-60">
+      <view class="title">常去的球场</view>
+      <view class="textstyle" wx:if="{{ matchedUserInfo.court }}">{{ matchedUserInfo.court }}</view>
+      <view class="textstyle" wx:else>用户暂时还未填写~</view>
+    </view>
+    <view class="mb-60">
+      <view class="title">俱乐部</view>
+      <view class="textstyle" wx:if="{{ matchedUserInfo.club }}">{{ matchedUserInfo.club }}</view>
+      <view class="textstyle" wx:else>用户暂时还未填写~</view>
+    </view>
+    <view class="mb-60">
+      <view class="title">个人简介</view>
+      <view class="textstyle" wx:if="{{ matchedUserInfo.introduction }}">
+        {{ matchedUserInfo.introduction }}
+      </view>
+      <view class="textstyle" wx:else>这个人很懒，暂时还未填写~</view>
+    </view>
+  </view>
+</view>
+<view class="flex btns justify-between">
+  <button style="background-color: #9A9A9A;" class="btn flex justify-center align-center mr-32" bindtap="handleFilterPerson">
+    <text>再说</text>
+  </button>
+  <button style="background-color: #DDF638;gap: 10rpx" class="btn flex justify-center align-center" bindtap="handleContactPerson">
+    <image style="width: 48rpx;height: 48rpx;" src="/images/ic_chat.png" mode="aspectFit" />
+    <text>约球</text>
+  </button>
+</view>
