@@ -1,12 +1,14 @@
 # 微信小程序云开发 quickstart
 
-这是云开发快速启动指引，其中演示了如何上手使用云开发的三大基础能力：
+这是一个给网球爱好者开发的tennis微信小程序，其中包括根据水平等级、距离范围的智能推荐算法、基于轮询的聊天功能，以及类似`github`活动图的活跃时间展示。
 
 - 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
 - 文件存储：在小程序前端直接上传/下载云端文件，在云开发控制台CMS可视化管理
 - 云函数：在云端运行的代码，微信私有协议天然鉴权，开发者只需编写业务逻辑代码
 
-## 参考文档
+### 参考文档
 
-- [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
+- [云开发文档] (https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
+
+  
 
